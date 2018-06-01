@@ -137,7 +137,6 @@ class ClientsController extends Controller
         $fields = Field_attribute::select('id', 'name')->get();
         $client = Client::find($id);
         $clientFields = $client->fieldAttribute()->select('id')->get();
-        
         foreach($fields as $field){
             foreach($clientFields as $clientField){
                 if($field->id === $clientField->id){
@@ -145,7 +144,7 @@ class ClientsController extends Controller
                 }
             }
         }
-        
+
         return view('clients.edit_cr')
             ->withClient($this->clients->find($id))
             ->withFields($fields);

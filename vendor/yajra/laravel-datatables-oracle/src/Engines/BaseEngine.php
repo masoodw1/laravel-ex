@@ -108,7 +108,7 @@ abstract class BaseEngine implements DataTableEngineContract
     /**
      * Callback to override global search.
      *
-     * @var callable
+     * @var \Closure
      */
     protected $filterCallback;
 
@@ -169,16 +169,9 @@ abstract class BaseEngine implements DataTableEngineContract
     /**
      * Custom ordering callback.
      *
-     * @var callable
+     * @var \Closure
      */
     protected $orderCallback;
-
-    /**
-     * Skip paginate as needed.
-     *
-     * @var bool
-     */
-    protected $skipPaging = false;
 
     /**
      * Array of data to append on json response.
@@ -239,14 +232,12 @@ abstract class BaseEngine implements DataTableEngineContract
     public function wildcardLikeString($str, $lowercase = true)
     {
         $wild   = '%';
-        $chars = preg_split('//u', $str, -1, PREG_SPLIT_NO_EMPTY);
-        
-        if (count($chars) > 0) {
-            foreach ($chars as $char) {
-                $wild .= $char . '%';
+        $length = Str::length($str);
+        if ($length) {
+            for ($i = 0; $i < $length; $i++) {
+                $wild .= $str[$i] . '%';
             }
         }
-
         if ($lowercase) {
             $wild = Str::lower($wild);
         }
@@ -506,7 +497,7 @@ abstract class BaseEngine implements DataTableEngineContract
      * Override default column filter search.
      *
      * @param string $column
-     * @param string|callable $method
+     * @param string|Closure $method
      * @return $this
      * @internal param $mixed ...,... All the individual parameters required for specified $method
      * @internal string $1 Special variable that returns the requested search keyword.
@@ -638,7 +629,7 @@ abstract class BaseEngine implements DataTableEngineContract
      */
     public function paginate()
     {
-        if ($this->request->isPaginationable() && ! $this->skipPaging) {
+        if ($this->request->isPaginationable()) {
             $this->paging();
         }
     }
@@ -661,7 +652,7 @@ abstract class BaseEngine implements DataTableEngineContract
             $fractal = app('datatables.fractal');
 
             if ($this->serializer) {
-                $fractal->setSerializer($this->createSerializer());
+                $fractal->setSerializer(new $this->serializer);
             }
 
             //Get transformer reflection
@@ -691,20 +682,6 @@ abstract class BaseEngine implements DataTableEngineContract
         }
 
         return new JsonResponse($output);
-    }
-
-    /**
-     * Get or create transformer serializer instance.
-     *
-     * @return \League\Fractal\Serializer\SerializerAbstract
-     */
-    protected function createSerializer()
-    {
-        if ($this->serializer instanceof \League\Fractal\Serializer\SerializerAbstract) {
-            return $this->serializer;
-        }
-
-        return new $this->serializer();
     }
 
     /**
@@ -766,11 +743,11 @@ abstract class BaseEngine implements DataTableEngineContract
     /**
      * Update flags to disable global search
      *
-     * @param  callable $callback
+     * @param  \Closure $callback
      * @param  mixed $parameters
      * @param  bool $autoFilter
      */
-    public function overrideGlobalSearch(callable $callback, $parameters, $autoFilter = false)
+    public function overrideGlobalSearch(\Closure $callback, $parameters, $autoFilter = false)
     {
         $this->autoFilter               = $autoFilter;
         $this->isFilterApplied          = true;
@@ -811,10 +788,10 @@ abstract class BaseEngine implements DataTableEngineContract
     /**
      * Override default ordering method with a closure callback.
      *
-     * @param callable $closure
+     * @param \Closure $closure
      * @return $this
      */
-    public function order(callable $closure)
+    public function order(\Closure $closure)
     {
         $this->orderCallback = $closure;
 
@@ -856,29 +833,6 @@ abstract class BaseEngine implements DataTableEngineContract
     public function smart($bool = true)
     {
         Config::set('datatables.search.smart', $bool);
-
-        return $this;
-    }
-
-    /**
-     * Set total records manually.
-     *
-     * @param int $total
-     * @return $this
-     */
-    public function setTotalRecords($total)
-    {
-        $this->totalRecords = $total;
-
-        return $this;
-    }
-
-    /**
-     * Skip pagination as needed.
-     */
-    public function skipPaging()
-    {
-        $this->skipPaging = true;
 
         return $this;
     }
@@ -996,5 +950,18 @@ abstract class BaseEngine implements DataTableEngineContract
     protected function isOracleSql()
     {
         return in_array($this->database, ['oracle', 'oci8']);
+    }
+
+    /**
+     * Set total records manually.
+     *
+     * @param int $total
+     * @return $this
+     */
+    public function setTotalRecords($total)
+    {
+        $this->totalRecords = $total;
+
+        return $this;
     }
 }

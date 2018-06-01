@@ -59,13 +59,6 @@ abstract class DataTable implements DataTableContract, DataTableButtonsContract
     protected $scopes = [];
 
     /**
-     * Html builder.
-     *
-     * @var \Yajra\Datatables\Html\Builder
-     */
-    protected $htmlBuilder;
-
-    /**
      * Export filename.
      *
      * @var string
@@ -180,7 +173,7 @@ abstract class DataTable implements DataTableContract, DataTableButtonsContract
      */
     public function builder()
     {
-        return $this->htmlBuilder ?: $this->htmlBuilder = $this->datatables->getHtmlBuilder();
+        return $this->datatables->getHtmlBuilder();
     }
 
     /**
@@ -329,22 +322,17 @@ abstract class DataTable implements DataTableContract, DataTableButtonsContract
      */
     public function snappyPdf()
     {
-        /** @var \Barryvdh\Snappy\PdfWrapper $snappy */
+        $data   = $this->getDataForPrint();
         $snappy = app('snappy.pdf.wrapper');
-
-        $options     = Config::get('datatables.snappy.options', [
+        $snappy->setOptions([
             'no-outline'    => true,
             'margin-left'   => '0',
             'margin-right'  => '0',
             'margin-top'    => '10mm',
             'margin-bottom' => '10mm',
-        ]);
-        $orientation = Config::get('datatables.snappy.orientation', 'landscape');
+        ])->setOrientation('landscape');
 
-        $snappy->setOptions($options)
-               ->setOrientation($orientation);
-
-        return $snappy->loadHTML($this->printPreview())
+        return $snappy->loadView($this->printPreview, compact('data'))
                       ->download($this->getFilename() . ".pdf");
     }
 

@@ -35,6 +35,7 @@
         </div>
         
         @foreach ($case_fields as $field)
+        
         <div class="panel panel-default shadow">
                 <div class="panel-heading">
                     <div class="row">
@@ -53,6 +54,7 @@
                                 </button>
                             </div>    
                             <?php if($field['data'][0]->status==0){ ?>
+                            @if(Entrust::can('approve-reject-component'))
                             <div class="col-md-2">
                                 <button 
                                 type="button" 
@@ -73,7 +75,8 @@
                                     <i class="fa fa-close"> Reject</i>  
                                 </button>
                             </div>   
-                            <?php } else { echo '<span style="padding-top:15px; color:red;">Marked as Rejected</span>'; } ?>
+                            @endif
+                            <?php } else { echo '<span style="padding-top:15px; color:'.$field['data'][0]->Status->hex.';">'.$field['data'][0]->Status->name.'</span>'; } ?>
                         </div> 
                     </div>    
                 </div>

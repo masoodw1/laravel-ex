@@ -165,7 +165,10 @@ return [
         App\Providers\AccessServiceProvider::class,
         App\Providers\BroadcastServiceProvider::class,
         App\Providers\ViewComposerServiceProvider::class,
-       
+    
+        Barryvdh\DomPDF\ServiceProvider::class,
+
+
 
     ],
 
@@ -222,6 +225,11 @@ return [
         'role' => \Zizaco\Entrust\Middleware\EntrustRole::class,
         'permission' => \Zizaco\Entrust\Middleware\EntrustPermission::class,
         'ability' => \Zizaco\Entrust\Middleware\EntrustAbility::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
+
+        
+
+
     ],
 
 ];

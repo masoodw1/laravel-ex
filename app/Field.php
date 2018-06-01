@@ -15,4 +15,8 @@ class Field extends Model
     {
         return $this->hasMany('App\Field_attribute', 'id', 'type');
     }
+
+    public function status(){
+        return $this->hasOne('App\Status_code', 'id', 'status');
+    }
 }

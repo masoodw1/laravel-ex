@@ -56,6 +56,10 @@ class Client extends Model
 
     public function fieldAttribute()
     {
-        return $this->belongsToMany('App\Field_attribute', 'client_requirements', 'client_id', 'fieldattr_id');
+        return $this->belongsToMany('App\Field_attribute', 'client_requirements', 'client_id', 'fieldattr_id')->select('id','client_id', 'fieldattr_id', 'name');
+    }
+
+    public function task(){
+        return $this->hasMany('App\Models\Task');
     }
 }

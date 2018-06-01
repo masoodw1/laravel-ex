@@ -56,6 +56,7 @@ return [
         /**
          * Base namespace/directory to create the new file.
          * This is appended on default Laravel namespace.
+         *
          * Usage: php artisan datatables:make User
          * Output: App\DataTables\UserDataTable
          * With Model: App\User (default model)
@@ -66,6 +67,7 @@ return [
         /**
          * Base namespace/directory where your model's are located.
          * This is appended on default Laravel namespace.
+         *
          * Usage: php artisan datatables:make Post --model
          * Output: App\DataTables\PostDataTable
          * With Model: App\Post
@@ -81,18 +83,4 @@ return [
      * Excel package: maatwebsite/excel
      */
     'pdf_generator'   => 'excel',
-
-    /**
-     * Snappy PDF options.
-     */
-    'snappy'          => [
-        'options'     => [
-            'no-outline'    => true,
-            'margin-left'   => '0',
-            'margin-right'  => '0',
-            'margin-top'    => '10mm',
-            'margin-bottom' => '10mm',
-        ],
-        'orientation' => 'landscape',
-    ],
 ];

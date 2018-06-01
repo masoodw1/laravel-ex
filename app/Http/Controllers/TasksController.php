@@ -113,18 +113,20 @@ class TasksController extends Controller
     public function show(Request $request, $id)
     {
         $caseFields = $this->tasks->find($id)->caseFields;
+        $caseFieldsWithStatus = Task::with('CaseFields.Status')->where('id', $id)->get();
         $orderedCaseFields = array();
         $status_codes = Status_code::find(1);
 
-
-        foreach ($caseFields as $caseField) {
+// dd($caseFieldsWithStatus[0]->CaseFields);
+// exit;
+        foreach ($caseFieldsWithStatus[0]->CaseFields as $caseField) {
             // foreach($casefield as $key => $val){
             //     if($key === 'status' ){
                         
             //     }
             //     $cf[$key] = 
             // }
-            
+
             $orderedCaseFields[$caseField->type]['data'][] = $caseField;
             $orderedCaseFields[$caseField->type]['type'] = Field::find($caseField->id)->fieldAttribute->first()->name;
             
