@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Everon HR</title>
+    <title>Everon</title>
     <link href="{{ URL::asset('css/jasny-bootstrap.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ URL::asset('css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ URL::asset('css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css">
@@ -94,7 +94,7 @@ $('body').click(function(e) {
             <a href="{{route('users.show', \Auth::id())}}" class=" list-group-item" data-parent="#MainMenu"><i
                         class="glyphicon sidebar-icon glyphicon-user"></i><span id="menu-txt">{{ __('Profile') }}</span> </a>
 
-
+                        @if(Entrust::can('manage-clients'))
             <a href="#clients" class=" list-group-item" data-toggle="collapse" data-parent="#MainMenu"><i
                         class="glyphicon sidebar-icon glyphicon-tag"></i><span id="menu-txt">{{ __('Clients') }}</span>
             <i class="ion-chevron-up  arrow-up sidebar-arrow"></i></a>
@@ -106,6 +106,7 @@ $('body').click(function(e) {
                        class="list-group-item childlist">{{ __('New Client') }}</a>
                 @endif
             </div>
+            @endif
 
             <a href="#tasks" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu"><i
                         class="glyphicon sidebar-icon glyphicon-tasks"></i><span id="menu-txt">{{ __('Tasks') }}</span>
@@ -131,16 +132,18 @@ $('body').click(function(e) {
                 @endif
             </div>
 
-            <a href="#leads" class=" list-group-item" data-toggle="collapse" data-parent="#MainMenu"><i
-                        class="glyphicon sidebar-icon glyphicon-hourglass"></i><span id="menu-txt">{{ __('Leads') }}</span>
+            <a href="#ttask" class=" list-group-item" data-toggle="collapse" data-parent="#MainMenu"><i
+                        class="glyphicon sidebar-icon glyphicon-hourglass"></i><span id="menu-txt">Tasks</span>
             <i class="ion-chevron-up  arrow-up sidebar-arrow"></i></a>
-            <div class="collapse" id="leads">
-                <a href="{{ route('leads.index')}}" class="list-group-item childlist">All Cases</a>
+            <div class="collapse" id="ttask">
+                <a href="{{ route('ttask.index')}}" class="list-group-item childlist">All Tasks</a>
                 @if(Entrust::can('lead-create'))
-                    <a href="{{ route('leads.create')}}"
-                       class="list-group-item childlist">{{ __('New Lead') }}</a>
+                    <a href="{{ route('ttask.create')}}"
+                       class="list-group-item childlist">New Task</a>
                 @endif
             </div>
+
+            @if(Entrust::can('manage-clients'))
             <a href="#departments" class=" list-group-item" data-toggle="collapse" data-parent="#MainMenu"><i
                         class="sidebar-icon glyphicon glyphicon-list-alt"></i><span id="menu-txt">{{ __('Departments') }}</span>
             <i class="ion-chevron-up  arrow-up sidebar-arrow"></i></a>
@@ -152,6 +155,7 @@ $('body').click(function(e) {
                        class="list-group-item childlist">{{ __('New Department') }}</a>
                 @endif
             </div>
+            @endif
 
             @if(Entrust::hasRole('administrator'))
                 <a href="#settings" class=" list-group-item" data-toggle="collapse" data-parent="#MainMenu"><i

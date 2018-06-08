@@ -60,7 +60,7 @@ class LeadsController extends Controller
         )->where('status', 1)->get();
         return Datatables::of($leads)
             ->addColumn('titlelink', function ($leads) {
-                return '<a href="leads/' . $leads->id . '" ">' . $leads->title . '</a>';
+                return '<a href="ttask/' . $leads->id . '" ">' . $leads->title . '</a>';
             })
             ->editColumn('user_created_id', function ($leads) {
                 return $leads->creator->name;
@@ -96,7 +96,7 @@ class LeadsController extends Controller
     {
         $getInsertedId = $this->leads->create($request);
         Session()->flash('flash_message', 'Lead is created');
-        return redirect()->route('leads.show', $getInsertedId);
+        return redirect()->route('ttask.show', $getInsertedId);
     }
 
     public function updateAssign($id, Request $request)

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('heading')
-    <h1>{{__('All Leads')}}</h1>
+    <h1>All Tasks</h1>
 @stop
 
 @section('content')

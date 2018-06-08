@@ -23,7 +23,7 @@
 
         <!-- Small boxes (Stat box) -->
         <div class="row">
-            <div class="col-lg-3 col-xs-6">
+            <div class="col-lg-6 col-xs-6">
                 <!-- small box -->
                 <div class="small-box bg-aqua">
                     <div class="inner">
@@ -33,7 +33,7 @@
                             @endforeach
                         </h3>
 
-                        <p>{{ __('Tasks completed this month') }}</p>
+                        <p>Cases compleated this month</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-ios-book-outline"></i>
@@ -42,28 +42,10 @@
                                 class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
+            
             <!-- ./col -->
-            <div class="col-lg-3 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-green">
-                    <div class="inner">
-                        <h3>
-                            @foreach($leadCompletedThisMonth as $thisMonth)
-                                {{$thisMonth->total}}
-                            @endforeach
-                        </h3>
-
-                        <p>{{ __('Leads completed this month') }}</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
-                    </div>
-                    <a href="{{route('leads.index')}}" class="small-box-footer">{{ __('All Leads') }} <i
-                                class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-xs-6">
+            @if(Entrust::can('manage-clients'))
+            <div class="col-lg-6 col-xs-6">
                 <!-- small box -->
                 <div class="small-box bg-yellow">
                     <div class="inner">
@@ -79,29 +61,7 @@
                 </div>
             </div>
             <!-- ./col -->
-            <div class="col-lg-3 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-red">
-                    <div class="inner">
-                        <h3>
-                            @foreach($totalTimeSpent[0] as $sum => $value)
-
-                                {{$value}}
-                            @endforeach
-                            @if($value == "")
-                                0
-                            @endif</h3>
-
-                        <p>{{ __('Total hours registered') }}</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-pie-graph"></i>
-                    </div>
-                    <a href="#" class="small-box-footer"> {{ __('More info') }} <i
-                                class="fa fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <!-- ./col -->
+            @endif
         </div>
         <!-- /.row -->
 

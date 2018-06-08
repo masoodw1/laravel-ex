@@ -1,12 +1,12 @@
 @extends('layouts.master')
 @section('heading')
-    <h1>{{ __('Create lead') }}</h1>
+    <h1>Create Task</h1>
 @stop
 
 @section('content')
 
     {!! Form::open([
-            'route' => 'leads.store'
+            'route' => 'ttask.store'
             ]) !!}
 
     <div class="form-group">

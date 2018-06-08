@@ -73,7 +73,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::patch('/updatestatus/{id}', 'LeadsController@updateStatus');
         Route::patch('/updatefollowup/{id}', 'LeadsController@updateFollowup')->name('leads.followup');
     });
-        Route::resource('leads', 'LeadsController');
+        Route::resource('ttask', 'LeadsController');
         Route::post('/comments/{type}/{id}', 'CommentController@store');
     /**
      * Settings

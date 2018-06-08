@@ -48,15 +48,52 @@ class ReportsController extends Controller
      */
     public function show($id)
     {   
-
+       $fields = Field_attribute::select('id', 'name')->get();
        $report = Task::where('tasks.id', $id)->with('client.fieldAttribute.field')->get();
-    
-        // dd($report->toArray());
+    //    dd($report[0]->client->fieldAttribute);
+        foreach($fields as $field){
+            // $display[]['services_offered'] = $value->name;
+            // $display[]['services_offered'] = $value->name;
+           
+            foreach($report[0]->client->fieldAttribute as $c_field){
+               if($field->id === $c_field->id){
+                $display[$field->id]['services_offered'] = $field->name;
+                $display[$field->id]['client_request_order'] = "YES";
+                $display[$field->id]['Remarks'] = "POSITIVE";
+               }
+               else{
+                $display[$field->id]['services_offered'] = $field->name;
+                $display[$field->id]['client_request_order'] = "NO";
+                $display[$field->id]['Remarks'] = "NA";
+               }
+               //echo $c_field->field->status;
+               
+                    if($c_field->field !== null){
+                if($c_field->field->status === 2){
+                    $display[$field->id]['Status'] = "Compleated";
+                }
+                elseif ($c_field->field->status === 0){
+                    $display[$field->id]['Status'] = "Processing";
+                }
+                else{
+                    $display[$field->id]['Status'] = $c_field->field->status;
+                }
+
+
+                }
+                else{
+                    $display[$field->id]['Status'] = 'NA';
+                }
+            }
+        }
+        //  dd($report->toArray());
         $data = [
             'address' => 'regus” unit no.2201, world trade center, 22nd floor, brigade gateway complex,
             dr.rajkumar raod, malleshwaram (west), bangalore - 560055,
             email : info@everongroup.in, web:
-            ph:+918067935702 , fax : +9167935301'
+            ph:+918067935702 , fax : +9167935301',
+            'report' => $report,
+            'display_fields' => $display
         ];
         // $this->generate_pdf($data);
 

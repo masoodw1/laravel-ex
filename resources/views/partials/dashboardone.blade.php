@@ -23,35 +23,13 @@
             </div>
         </div>
     </div>
-    <div class="box box-primary">
-        <div class="box-header with-border">
-            <h4 class="box-title"
-            >
-               {{ __('Lead each month') }}
-            </h4>
-            <div class="box-tools pull-right">
-                <button type="button" id="collapse2" class="btn btn-box-tool" data-toggle="collapse"
-                        data-target="#collapseTwo"><i id="toggler2" class="fa fa-minus"></i>
-                </button>
-            </div>
-        </div>
-        <div id="collapseTwo" class="panel-collapse">
-            <div class="box-body">
-                <div>
-                    <graphline class="chart" :labels="{{json_encode($createdLeadEachMonths)}}"
-                               :values="{{json_encode($leadCreated)}}"
-                               :valuesextra="{{json_encode($leadsCompleted)}}"></graphline>
-
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </div>
 <div class="col-sm-6">
 
     <div class="col-lg-12">
         <!-- Info Boxes Style 2 -->
-        <div class="info-box bg-yellow">
+        <div class="info-box bg-aqua">
             <span class="info-box-icon"><i class="ion ion-ios-book-outline"></i></span>
 
             <div class="info-box-content">
@@ -68,26 +46,7 @@
             <!-- /.info-box-content -->
         </div>
     </div>
-    <div class="col-lg-12">
-        <!-- /.info-box -->
-        <div class="info-box bg-red">
-            <span class="info-box-icon"><i class="ion ion-stats-bars"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">{{ __('All Leads') }}</span>
-                <span class="info-box-number">{{$allCompletedLeads}} / {{$allleads}}</span>
-
-                <div class="progress">
-                    <div class="progress-bar" style="width: {{$totalPercentageLeads}}%"></div>
-                </div>
-                  <span class="progress-description">
-                    {{number_format($totalPercentageLeads, 0)}}% {{ __('Completed') }}
-                  </span>
-            </div>
-            <!-- /.info-box-content -->
-        </div>
-
-    </div>
+    
     <div class="col-sm-12">
 
         <div class="box box-primary">
@@ -170,7 +129,7 @@
             <span class="info-box-icon bg-green"><i class="ion ion-stats-bars"></i></span>
 
             <div class="info-box-content">
-                <span class="info-box-text">{{ __('Leads completed today') }}</span>
+                <span class="info-box-text">Tasks compleated today</span>
                 <span class="info-box-number">{{$completedLeadsToday}}</span>
             </div>
             <!-- /.info-box-content -->
@@ -183,7 +142,7 @@
             <span class="info-box-icon bg-yellow"><i class="ion ion-stats-bars"></i></span>
 
             <div class="info-box-content">
-                <span class="info-box-text">{{ __('Leads created today') }}</span>
+                <span class="info-box-text">Tasks created today</span>
                 <span class="info-box-number">{{$createdLeadsToday}}</span>
             </div>
             <!-- /.info-box-content -->
