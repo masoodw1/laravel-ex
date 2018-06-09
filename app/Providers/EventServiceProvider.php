@@ -13,20 +13,31 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\SomeEvent' => [
-            'App\Listeners\EventListener',
+        'App\Events\ClientAction' => [
+            'App\Listeners\ClientActionNotify',
+            'App\Listeners\ClientActionLog',
         ],
+         'App\Events\TaskAction' => [
+            'App\Listeners\TaskActionNotify',
+            'App\Listeners\TaskActionLog',
+         ],
+        'App\Events\LeadAction' => [
+            'App\Listeners\LeadActionNotify',
+            'App\Listeners\LeadActionLog',
+        ],
+        'App\Events\NewComment' => [
+            'App\Listeners\NotiftyMentionedUsers'
+        ]
     ];
 
     /**
      * Register any other events for your application.
      *
-     * @param  \Illuminate\Contracts\Events\Dispatcher  $events
-     * @return void
+     * @internal param DispatcherContract $events
      */
-    public function boot(DispatcherContract $events)
+    public function boot()
     {
-        parent::boot($events);
+        parent::boot();
 
         //
     }
