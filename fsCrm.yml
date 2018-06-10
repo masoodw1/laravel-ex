@@ -1,0 +1,1262 @@
+%YAML 1.1
+---
+# fsCrm.activity_log
+-
+  id: 1
+  user_id: 1
+  text: "Client test was assigned to SuperAdmin"
+  source_type: "App\\Models\\Client"
+  source_id: 1
+  ip_address: ""
+  action: "created"
+  created_at: "2018-04-30 00:03:22"
+  updated_at: "2018-04-30 00:03:22"
+-
+  id: 2
+  user_id: 1
+  text: "tst task was created by SuperAdmin and assigned to SuperAdmin"
+  source_type: "App\\Models\\Task"
+  source_id: 1
+  ip_address: ""
+  action: "created"
+  created_at: "2018-04-30 00:03:35"
+  updated_at: "2018-04-30 00:03:35"
+-
+  id: 3
+  user_id: 1
+  text: "SuperAdmin assigned task to John DETL"
+  source_type: "App\\Models\\Task"
+  source_id: 1
+  ip_address: ""
+  action: "updated_assign"
+  created_at: "2018-04-30 00:04:06"
+  updated_at: "2018-04-30 00:04:06"
+-
+  id: 4
+  user_id: 1
+  text: "SuperAdmin assigned task to John DETL"
+  source_type: "App\\Models\\Task"
+  source_id: 1
+  ip_address: ""
+  action: "updated_assign"
+  created_at: "2018-04-30 00:05:01"
+  updated_at: "2018-04-30 00:05:01"
+-
+  id: 5
+  user_id: 1
+  text: "SuperAdmin inserted a new time for this task"
+  source_type: "App\\Models\\Task"
+  source_id: 1
+  ip_address: ""
+  action: "updated_time"
+  created_at: "2018-05-04 00:28:50"
+  updated_at: "2018-05-04 00:28:50"
+-
+  id: 6
+  user_id: 1
+  text: "SuperAdmin inserted a new time for this task"
+  source_type: "App\\Models\\Task"
+  source_id: 1
+  ip_address: ""
+  action: "updated_time"
+  created_at: "2018-05-04 00:53:04"
+  updated_at: "2018-05-04 00:53:04"
+-
+  id: 7
+  user_id: 1
+  text: "SuperAdmin inserted a new time for this task"
+  source_type: "App\\Models\\Task"
+  source_id: 1
+  ip_address: ""
+  action: "updated_time"
+  created_at: "2018-05-04 00:59:13"
+  updated_at: "2018-05-04 00:59:13"
+-
+  id: 8
+  user_id: 1
+  text: "Task was completed by SuperAdmin"
+  source_type: "App\\Models\\Task"
+  source_id: 2
+  ip_address: ""
+  action: "updated_status"
+  created_at: "2018-06-07 23:41:40"
+  updated_at: "2018-06-07 23:41:40"
+-
+  id: 9
+  user_id: 1
+  text: "test was created by SuperAdmin and assigned to SuperAdmin"
+  source_type: "App\\Models\\Lead"
+  source_id: 1
+  ip_address: ""
+  action: "created"
+  created_at: "2018-06-08 00:28:58"
+  updated_at: "2018-06-08 00:28:58"
+-
+  id: 10
+  user_id: 1
+  text: "Lead was completed by SuperAdmin"
+  source_type: "App\\Models\\Lead"
+  source_id: 1
+  ip_address: ""
+  action: "updated_status"
+  created_at: "2018-06-08 00:29:12"
+  updated_at: "2018-06-08 00:29:12"
+-
+  id: 11
+  user_id: 1
+  text: "test1 was created by SuperAdmin and assigned to SuperAdmin"
+  source_type: "App\\Models\\Lead"
+  source_id: 2
+  ip_address: ""
+  action: "created"
+  created_at: "2018-06-08 00:43:52"
+  updated_at: "2018-06-08 00:43:52"
+-
+  id: 12
+  user_id: 1
+  text: "test1 was created by SuperAdmin and assigned to SuperAdmin"
+  source_type: "App\\Models\\Lead"
+  source_id: 3
+  ip_address: ""
+  action: "created"
+  created_at: "2018-06-08 00:44:46"
+  updated_at: "2018-06-08 00:44:46"
+-
+  id: 13
+  user_id: 1
+  text: "aiuudmk was created by SuperAdmin and assigned to SuperAdmin"
+  source_type: "App\\Models\\Lead"
+  source_id: 4
+  ip_address: ""
+  action: "created"
+  created_at: "2018-06-08 00:45:43"
+  updated_at: "2018-06-08 00:45:43"
+-
+  id: 14
+  user_id: 1
+  text: "aiuudmk was created by SuperAdmin and assigned to SuperAdmin"
+  source_type: "App\\Models\\Lead"
+  source_id: 5
+  ip_address: ""
+  action: "created"
+  created_at: "2018-06-08 00:46:26"
+  updated_at: "2018-06-08 00:46:26"
+-
+  id: 15
+  user_id: 1
+  text: "Lead was completed by SuperAdmin"
+  source_type: "App\\Models\\Lead"
+  source_id: 4
+  ip_address: ""
+  action: "updated_status"
+  created_at: "2018-06-08 00:49:33"
+  updated_at: "2018-06-08 00:49:33"
+# fsCrm.allowed_assign
+-
+  id: 1
+  role_id: 5
+  allowed_department: 2
+  allowed_role: 5
+-
+  id: 2
+  role_id: 1
+  allowed_department: 2
+  allowed_role: 0
+-
+  id: 3
+  role_id: 5
+  allowed_department: 2
+  allowed_role: 7
+# fsCrm.clients
+-
+  id: 1
+  name: "IBM"
+  ref_no: 0
+  email: "test@client.com"
+  primary_number: ""
+  secondary_number: ""
+  address: "#g3, asf,.csasdf"
+  zipcode: 560047
+  city: "Bangalore"
+  company_name: "ibm bangalore"
+  vat: ""
+  industry: ""
+  company_type: ""
+  user_id: 1
+  industry_id: 1
+  created_at: "2018-04-30 00:03:22"
+  updated_at: "2018-04-30 00:03:22"
+# fsCrm.client_requirements
+-
+  client_id: 1
+  fieldattr_id: 1
+  managed_by: 0
+  package_id: 1
+-
+  client_id: 1
+  fieldattr_id: 3
+  managed_by: 0
+  package_id: 1
+-
+  client_id: 1
+  fieldattr_id: 4
+  managed_by: 0
+  package_id: 1
+# fsCrm.comments
+-
+  id: 1
+  description: "test"
+  source_id: 2
+  source_type: "App\\Models\\Task"
+  user_id: 1
+  created_at: "2018-05-05 00:22:25"
+  updated_at: "2018-05-05 00:22:25"
+# fsCrm.departments
+-
+  id: 1
+  name: "Managment"
+  created_at: "2018-04-28 02:12:58"
+  updated_at: "2018-04-28 02:12:58"
+-
+  id: 2
+  name: "Bangalore Office"
+  description: ""
+  created_at: "2018-04-29 23:56:31"
+  updated_at: "2018-04-29 23:56:31"
+-
+  id: 3
+  name: "Chennai Office"
+# fsCrm.department_user
+-
+  id: 1
+  department_id: 1
+  user_id: 1
+-
+  id: 3
+  department_id: 2
+  user_id: 2
+-
+  id: 4
+  department_id: 2
+  user_id: 6
+-
+  id: 5
+  department_id: 3
+  user_id: 7
+-
+  id: 6
+  department_id: 2
+  user_id: 8
+-
+  id: 7
+  department_id: 2
+  user_id: 9
+-
+  id: 8
+  department_id: 2
+  user_id: 10
+-
+  id: 9
+  department_id: 2
+  user_id: 12
+-
+  id: 10
+  department_id: 3
+  user_id: 13
+-
+  id: 11
+  department_id: 2
+  user_id: 14
+-
+  id: 12
+  department_id: 1
+  user_id: 15
+# fsCrm.fields
+-
+  id: 1
+  type: 2
+  name: "Address 1"
+  value: ", blah blah."
+  task_id: 1
+  status: 0
+  Remarks: 0
+  created_at: "2018-05-03 05:34:18"
+  updated_at: "2018-05-03 05:34:18"
+-
+  id: 2
+  type: 1
+  name: "School Education "
+  value: "BCOM"
+  task_id: 1
+  status: 0
+  Remarks: 0
+  created_at: "2018-05-03 13:29:39"
+  updated_at: "2018-05-03 13:29:39"
+-
+  id: 3
+  type: 3
+  name: "Court"
+  value: "null"
+  task_id: 1
+  status: 0
+  Remarks: 0
+  created_at: "2018-05-04 01:13:26"
+  updated_at: "2018-05-04 01:13:26"
+-
+  id: 4
+  type: 1
+  name: "Collage Education"
+  value: "Dropout!"
+  task_id: 1
+  status: 0
+  Remarks: 0
+  created_at: "2018-05-04 01:25:10"
+  updated_at: "2018-05-04 01:25:10"
+-
+  id: 6
+  type: 2
+  name: "address 2"
+  value: "space"
+  task_id: 1
+  status: 0
+  Remarks: 0
+  created_at: "2018-05-04 03:48:20"
+  updated_at: "2018-05-04 03:48:20"
+-
+  id: 32
+  type: 5
+  name: "Sales Excecutive"
+  value: "details : tests"
+  task_id: 2
+  status: 2
+  Remarks: 0
+  created_at: "2018-05-05 01:10:27"
+  updated_at: "2018-05-25 20:09:02"
+-
+  id: 33
+  type: 6
+  name: "test"
+  value: "details : aaaa"
+  task_id: 2
+  status: 2
+  Remarks: 0
+  created_at: "2018-05-05 01:38:04"
+  updated_at: "2018-05-25 20:11:26"
+-
+  id: 34
+  type: 1
+  name: ""
+  value: "textarea-1526501071915 : asdf"
+  task_id: 2
+  status: 1
+  Remarks: 0
+  created_at: "2018-05-16 20:34:18"
+  updated_at: "2018-05-25 20:11:40"
+-
+  id: 35
+  type: 3
+  name: ""
+  value: "attachment : "
+  task_id: 2
+  status: 2
+  Remarks: 0
+  created_at: "2018-05-24 20:31:24"
+  updated_at: "2018-05-25 20:49:05"
+-
+  id: 36
+  type: 1
+  name: ""
+  value: "textarea-1526501071915 : "
+  task_id: 2
+  status: 0
+  Remarks: 0
+  created_at: "2018-05-24 20:33:27"
+  updated_at: "2018-05-24 20:33:27"
+-
+  id: 37
+  type: 1
+  name: ""
+  value: "textarea-1526501071915 : "
+  task_id: 2
+  status: 0
+  Remarks: 0
+  created_at: "2018-05-24 20:33:38"
+  updated_at: "2018-05-24 20:33:38"
+# fsCrm.field_attributes
+-
+  id: 1
+  name: "Education"
+  form_struc: "[\n	{\n		\"type\": \"date\",\n		\"label\": \"Date Field\",\n		\"className\": \"form-control\",\n		\"name\": \"date-1526501067037\"\n	},\n	{\n		\"type\": \"file\",\n		\"label\": \"File Upload\",\n		\"className\": \"form-control\",\n		\"name\": \"file-1526501067919\",\n		\"subtype\": \"file\"\n	},\n	{\n		\"type\": \"header\",\n		\"subtype\": \"h1\",\n		\"label\": \"Header\"\n	},\n	{\n		\"type\": \"number\",\n		\"label\": \"Number\",\n		\"className\": \"form-control\",\n		\"name\": \"number-1526501069033\"\n	},\n	{\n		\"type\": \"radio-group\",\n		\"label\": \"Radio Group\",\n		\"name\": \"radio-group-1526501069623\",\n		\"values\": [\n			{\n				\"label\": \"Option 1\",\n				\"value\": \"option-1\"\n			},\n			{\n				\"label\": \"Option 2\",\n				\"value\": \"option-2\"\n			},\n			{\n				\"label\": \"Option 3\",\n				\"value\": \"option-3\"\n			}\n		]\n	},\n	{\n		\"type\": \"select\",\n		\"label\": \"Select\",\n		\"className\": \"form-control\",\n		\"name\": \"select-1526501070228\",\n		\"values\": [\n			{\n				\"label\": \"Option 1\",\n				\"value\": \"option-1\",\n				\"selected\": true\n			},\n			{\n				\"label\": \"Option 2\",\n				\"value\": \"option-2\"\n			},\n			{\n				\"label\": \"Option 3\",\n				\"value\": \"option-3\"\n			}\n		]\n	},\n	{\n		\"type\": \"text\",\n		\"label\": \"Text Input\",\n		\"className\": \"form-control\",\n		\"name\": \"text-1526501071183\",\n		\"subtype\": \"text\"\n	},\n	{\n		\"type\": \"textarea\",\n		\"label\": \"Text Area\",\n		\"className\": \"form-control\",\n		\"name\": \"textarea-1526501071915\",\n		\"subtype\": \"textarea\"\n	}\n]"
+  created_at: "0000-00-00"
+  updated_at: "2018-05-16"
+-
+  id: 2
+  name: "Address"
+  form_struc: "[\n	{\n		\"type\": \"checkbox-group\",\n		\"required\": true,\n		\"label\": \"Checkbox Group\",\n		\"description\": \"help info\",\n		\"inline\": true,\n		\"name\": \"checkbox-group-1526472562891\",\n		\"access\": true,\n		\"other\": true,\n		\"role\": \"7\",\n		\"values\": [\n			{\n				\"label\": \"Option 1\",\n				\"value\": \"option-1\",\n				\"selected\": true\n			},\n			{\n				\"label\": \"option 2\",\n				\"value\": \"option2\"\n			}\n		]\n	},\n	{\n		\"type\": \"date\",\n		\"label\": \"Date Field\",\n		\"className\": \"form-control\",\n		\"name\": \"date-1526473736188\"\n	},\n	{\n		\"type\": \"file\",\n		\"label\": \"File Upload\",\n		\"className\": \"form-control\",\n		\"name\": \"file-1526473738096\",\n		\"subtype\": \"file\"\n	},\n	{\n		\"type\": \"number\",\n		\"label\": \"Number\",\n		\"className\": \"form-control\",\n		\"name\": \"number-1526473738935\"\n	},\n	{\n		\"type\": \"radio-group\",\n		\"label\": \"Radio Group\",\n		\"name\": \"radio-group-1526473739718\",\n		\"values\": [\n			{\n				\"label\": \"Option 1\",\n				\"value\": \"option-1\"\n			},\n			{\n				\"label\": \"Option 2\",\n				\"value\": \"option-2\"\n			},\n			{\n				\"label\": \"Option 3\",\n				\"value\": \"option-3\"\n			}\n		]\n	},\n	{\n		\"type\": \"select\",\n		\"label\": \"Select\",\n		\"name\": \"select-1526473740386\",\n		\"className\": \"title\",\n		\"values\": [\n			{\n				\"label\": \"Option 1\",\n				\"value\": \"option-1\",\n				\"selected\": true\n			},\n			{\n				\"label\": \"Option 2\",\n				\"value\": \"option-2\"\n			},\n			{\n				\"label\": \"Option 3\",\n				\"value\": \"option-3\"\n			}\n		]\n	},\n	{\n		\"type\": \"text\",\n		\"label\": \"Text Field\",\n		\"name\": \"text-1526473741122\",\n		\"subtype\": \"text\",\n		\"className\": \"title\"\n	},\n	{\n		\"type\": \"textarea\",\n		\"subtype\": \"tinymce\",\n		\"required\": true,\n		\"label\": \"tinyMCE\",\n		\"name\": \"textarea-1526473741864\",\n		\"className\": \"title\"\n	}\n]"
+  created_at: "0000-00-00"
+  updated_at: "2018-05-16"
+-
+  id: 3
+  name: "Court"
+  form_struc: "[{\r\n		\"type\": \"text\",\r\n		\"name\": \"courtType\",\r\n		\"dbGroup\": \"name\",\r\n		\"lable\": \"Enter court type\"\r\n	},\r\n	{\r\n		\"type\": \"textarea\",\r\n		\"name\": \"details\",\r\n		\"dbGroup\": \"value\",\r\n		\"lable\": \"Enter Details\"\r\n\r\n	},\r\n	{\r\n		\"type\": \"file\",\r\n		\"name\": \"attachment\",\r\n	  	\"dbGroup\": \"attachment\",\r\n		\"lable\": \"Additional Attachments\"\r\n	}\r\n]"
+  created_at: "0000-00-00"
+  updated_at: "0000-00-00"
+-
+  id: 4
+  name: "Police"
+  form_struc: "[{\n		\"type\": \"text\",\n		\"name\": \"Police\",\n		\"dbGroup\": \"name\",\n		\"lable\": \"Name of the Police station\"\n	}, {\n		\"type\": \"text\",\n		\"name\": \"details\",\n		\"dbGroup\": \"value\",\n		\"lable\": \"Juridiction\"\n	}, {\n		\"type\": \"remarks\",\n		\"name\": \"Remarks\",\n		\"dbGroup\": \"value\",\n		\"lable\": \"Additional Remarks\",\n		\"placeholder\": \"Additional Remarks\"\n	},\n	{\n		\"type\": \"file\",\n		\"name\": \"report_upload\",\n		\"dbGroup\": \"attachment\"\n	}\n]"
+  created_at: "0000-00-00"
+  updated_at: "0000-00-00"
+-
+  id: 5
+  name: "Employment"
+  form_struc: "[{\n	\"type\": \"text\",\n	\"name\": \"employmentType\",\n	\"dbGroup\": \"name\",\n	\"lable\": \"Enter employment type\"\n}, {\n	\"type\": \"textarea\",\n	\"name\": \"details\",\n	\"dbGroup\": \"value\",\n	\"lable\": \"Enter Details\"\n}, {\n	\"type\": \"file\",\n	\"name\": \"attachment\",\n	\"dbGroup\": \"attachment\",\n	\"lable\": \"Additional Attachments\"\n}]"
+  created_at: "0000-00-00"
+  updated_at: "0000-00-00"
+-
+  id: 6
+  name: "Reference"
+  form_struc: "[{ 		\"type\": \"text\", 		\"name\": \"referenceType\", 		\"dbGroup\": \"name\", 		\"lable\": \"Enter reference type\" 	}, 	{ 		\"type\": \"textarea\", 		\"name\": \"details\", 		\"dbGroup\": \"value\", 		\"lable\": \"Enter Details\"  	}, 	{ 		\"type\": \"file\", 		\"name\": \"attachment\", 		  	\"dbGroup\": \"attachment\",	\"lable\": \"Additional Attachments\" 	} ]"
+  created_at: "0000-00-00"
+  updated_at: "0000-00-00"
+-
+  id: 7
+  name: "Database"
+  form_struc: "[{ 		\"type\": \"text\", 		\"name\": \"databaseType\", 		\"dbGroup\": \"name\", 		\"lable\": \"Enter database type\" 	}, 	{ 		\"type\": \"textarea\", 		\"name\": \"details\", 		\"dbGroup\": \"value\", 		\"lable\": \"Enter Details\"  	}, 	{ 		\"type\": \"file\", 		\"name\": \"attachment\", 		  	\"dbGroup\": \"attachment\",	\"lable\": \"Additional Attachments\" 	} ]"
+  created_at: "0000-00-00"
+  updated_at: "0000-00-00"
+-
+  id: 8
+  name: "Identity"
+  form_struc: "[{ 		\"type\": \"text\", 		\"name\": \"identityType\", 		\"dbGroup\": \"name\", 		\"lable\": \"Enter identity type\" 	}, 	{ 		\"type\": \"textarea\", 		\"name\": \"details\", 		\"dbGroup\": \"value\", 		\"lable\": \"Enter Details\"  	}, 	{ 		\"type\": \"file\", 		\"name\": \"attachment\", 		  	\"dbGroup\": \"attachment\",	\"lable\": \"Additional Attachments\" 	} ]"
+  created_at: "0000-00-00"
+  updated_at: "0000-00-00"
+-
+  id: 9
+  name: "Drug"
+  form_struc: "[{ 		\"type\": \"text\", 		\"name\": \"drugType\", 		\"dbGroup\": \"name\", 		\"lable\": \"Enter drug type\" 	}, 	{ 		\"type\": \"textarea\", 		\"name\": \"details\", 		\"dbGroup\": \"value\", 		\"lable\": \"Enter Details\"  	}, 	{ 		\"type\": \"file\", 		\"name\": \"attachment\", 		  	\"dbGroup\": \"attachment\",	\"lable\": \"Additional Attachments\" 	} ]"
+  created_at: "0000-00-00"
+  updated_at: "0000-00-00"
+-
+  id: 10
+  name: "Passport"
+  form_struc: "[{ 		\"type\": \"text\", 		\"name\": \"expiry date\", 		\"dbGroup\": \"name\", 		\"lable\": \"Enter expiry date\" 	}, 	{ 		\"type\": \"textarea\", 		\"name\": \"details\", 		\"dbGroup\": \"value\", 		\"lable\": \"Enter Details\"  	}, 	{ 		\"type\": \"file\", 		\"name\": \"attachment\", 		  	\"dbGroup\": \"attachment\",	\"lable\": \"Additional Attachments\" 	} ]"
+  created_at: "0000-00-00"
+  updated_at: "0000-00-00"
+-
+  id: 11
+  name: "Driving License"
+  form_struc: "[{\n	\"type\": \"text\",\n	\"name\": \"expiry_date\",\n	\"dbGroup\": \"name\",\n	\"lable\": \"Enter expiry date DD/MM/YYYY\"\n},{\n  \"type\":\"text\",\n  \"name\": \"license_number\",\n  \"dbGroup\": \"value\",\n  \"lable\": \"Enter License Number\"\n}, {\n	\"type\": \"file\",\n	\"name\": \"attachment\",\n	\"dbGroup\": \"attachment\",\n	\"lable\": \"Additional Attachments\"\n}]"
+  created_at: "0000-00-00"
+  updated_at: "0000-00-00"
+# fsCrm.industries
+-
+  id: 1
+  name: "Accommodations"
+-
+  id: 2
+  name: "Accounting"
+-
+  id: 3
+  name: "Auto"
+-
+  id: 4
+  name: "Beauty & Cosmetics"
+-
+  id: 5
+  name: "Carpenter"
+-
+  id: 6
+  name: "Communications"
+-
+  id: 7
+  name: "Computer & IT"
+-
+  id: 8
+  name: "Construction"
+-
+  id: 9
+  name: "Consulting"
+-
+  id: 10
+  name: "Education"
+-
+  id: 11
+  name: "Electronics"
+-
+  id: 12
+  name: "Entertainment"
+-
+  id: 13
+  name: "Food & Beverages"
+-
+  id: 14
+  name: "Legal Services"
+-
+  id: 15
+  name: "Marketing"
+-
+  id: 16
+  name: "Real Estate"
+-
+  id: 17
+  name: "Retail"
+-
+  id: 18
+  name: "Sports"
+-
+  id: 19
+  name: "Technology"
+-
+  id: 20
+  name: "Tourism"
+-
+  id: 21
+  name: "Transportation"
+-
+  id: 22
+  name: "Travel"
+-
+  id: 23
+  name: "Utilities"
+-
+  id: 24
+  name: "Web Services"
+-
+  id: 25
+  name: "Other"
+# fsCrm.invoices
+-
+  id: 1
+  status: "draft"
+  client_id: 1
+  created_at: "2018-05-04 00:28:50"
+  updated_at: "2018-05-04 00:28:50"
+# fsCrm.invoice_lines
+-
+  id: 1
+  title: "Adress Verified"
+  comment: "update"
+  price: 0
+  invoice_id: 1
+  type: ""
+  quantity: 0
+  created_at: "2018-05-04 00:28:50"
+  updated_at: "2018-05-04 00:28:50"
+-
+  id: 2
+  title: "test"
+  comment: "test"
+  price: 0
+  invoice_id: 1
+  type: ""
+  quantity: 1
+  created_at: "2018-05-04 00:53:04"
+  updated_at: "2018-05-04 00:53:04"
+-
+  id: 3
+  title: "tests"
+  comment: ""
+  price: 0
+  invoice_id: 1
+  type: ""
+  quantity: 0
+  created_at: "2018-05-04 00:59:13"
+  updated_at: "2018-05-04 00:59:13"
+# fsCrm.leads
+-
+  id: 1
+  title: "test"
+  description: "test"
+  status: 2
+  user_assigned_id: 1
+  client_id: 1
+  user_created_id: 1
+  contact_date: "2018-06-15 11:00:00"
+  created_at: "2018-06-08 00:28:58"
+  updated_at: "2018-06-08 00:29:12"
+-
+  id: 2
+  title: "test1"
+  description: "tset1"
+  status: 1
+  user_assigned_id: 1
+  client_id: 1
+  user_created_id: 1
+  contact_date: "2018-06-15 11:00:00"
+  created_at: "2018-06-08 00:43:52"
+  updated_at: "2018-06-08 00:43:52"
+-
+  id: 3
+  title: "test1"
+  description: "tset1"
+  status: 1
+  user_assigned_id: 1
+  client_id: 1
+  user_created_id: 1
+  contact_date: "2018-06-15 11:00:00"
+  created_at: "2018-06-08 00:44:46"
+  updated_at: "2018-06-08 00:44:46"
+-
+  id: 4
+  title: "aiuudmk"
+  description: "asdf"
+  status: 2
+  user_assigned_id: 1
+  client_id: 1
+  user_created_id: 1
+  contact_date: "2018-06-15 11:00:00"
+  created_at: "2018-06-08 00:45:43"
+  updated_at: "2018-06-08 00:49:33"
+-
+  id: 5
+  title: "aiuudmk"
+  description: "asdf"
+  status: 1
+  user_assigned_id: 1
+  client_id: 1
+  user_created_id: 1
+  contact_date: "2018-06-15 11:00:00"
+  created_at: "2018-06-08 00:46:26"
+  updated_at: "2018-06-08 00:46:26"
+# fsCrm.migrations
+-
+  id: 1
+  migration: "2014_10_12_000000_create_users_table"
+  batch: 1
+-
+  id: 2
+  migration: "2014_10_12_100000_create_password_resets_table"
+  batch: 1
+-
+  id: 3
+  migration: "2015_06_04_124835_create_industries_table"
+  batch: 1
+-
+  id: 4
+  migration: "2015_12_28_163028_create_clients_table"
+  batch: 1
+-
+  id: 5
+  migration: "2015_12_29_150049_create_invoice_table"
+  batch: 1
+-
+  id: 6
+  migration: "2015_12_29_204031_tasks_table"
+  batch: 1
+-
+  id: 7
+  migration: "2016_01_10_204413_create_comments_table"
+  batch: 1
+-
+  id: 8
+  migration: "2016_01_18_113656_create_leads_table"
+  batch: 1
+-
+  id: 9
+  migration: "2016_01_23_144854_settings"
+  batch: 1
+-
+  id: 10
+  migration: "2016_01_26_003903_documents"
+  batch: 1
+-
+  id: 11
+  migration: "2016_01_31_211926_invoice_lines_table"
+  batch: 1
+-
+  id: 12
+  migration: "2016_03_21_171847_create_department_table"
+  batch: 1
+-
+  id: 13
+  migration: "2016_03_21_172416_create_department_user_table"
+  batch: 1
+-
+  id: 14
+  migration: "2016_04_06_230504_integrations"
+  batch: 1
+-
+  id: 15
+  migration: "2016_05_21_205532_create_activity_log_table"
+  batch: 1
+-
+  id: 16
+  migration: "2016_08_26_205017_entrust_setup_tables"
+  batch: 1
+-
+  id: 17
+  migration: "2016_11_04_200855_create_notifications_table"
+  batch: 1
+# fsCrm.notifications
+-
+  id: "006036bb-7088-4f69-8d23-0502046453b2"
+  type: "App\\Notifications\\LeadActionNotification"
+  notifiable_id: 1
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":1,\"created_user\":1,\"message\":\"aiuudmk was created by SuperAdmin and assigned to you\",\"type\":\"App\\\\Models\\\\Lead\",\"type_id\":5,\"url\":\"http:\\/\\/127.0.0.1:8000\\/leads\\/5\",\"action\":\"created\"}"
+  created_at: "2018-06-08 00:46:26"
+  updated_at: "2018-06-08 00:46:26"
+-
+  id: "328fe91e-4cef-420c-ad74-3962bffb4c6a"
+  type: "App\\Notifications\\LeadActionNotification"
+  notifiable_id: 1
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":1,\"created_user\":1,\"message\":\"test1 was created by SuperAdmin and assigned to you\",\"type\":\"App\\\\Models\\\\Lead\",\"type_id\":2,\"url\":\"http:\\/\\/127.0.0.1:8000\\/leads\\/2\",\"action\":\"created\"}"
+  created_at: "2018-06-08 00:43:52"
+  updated_at: "2018-06-08 00:43:52"
+-
+  id: "3d48de65-204d-4331-a386-cc16994a82dd"
+  type: "App\\Notifications\\TaskActionNotification"
+  notifiable_id: 2
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":2,\"created_user\":1,\"message\":\"SuperAdmin inserted a new time for Johnson Kumar\",\"type\":\"App\\\\Models\\\\Task\",\"type_id\":1,\"url\":\"http:\\/\\/127.0.0.1:8000\\/tasks\\/1\",\"action\":\"updated_time\"}"
+  created_at: "2018-05-04 00:28:50"
+  updated_at: "2018-05-04 00:28:50"
+-
+  id: "44c8f4cf-c7cd-422f-bbc0-4fadee1f7552"
+  type: "App\\Notifications\\ClientActionNotification"
+  notifiable_id: 1
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":1,\"created_user\":1,\"message\":\"Client test was assigned to you\",\"type\":\"App\\\\Models\\\\Client\",\"type_id\":1,\"url\":\"http:\\/\\/127.0.0.1:8000\\/clients\\/1\",\"action\":\"created\"}"
+  created_at: "2018-04-30 00:03:22"
+  updated_at: "2018-04-30 00:03:22"
+-
+  id: "46b69b94-d48e-4ab4-b939-e105ff7cfcf0"
+  type: "App\\Notifications\\TaskActionNotification"
+  notifiable_id: 2
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":2,\"created_user\":1,\"message\":\"SuperAdmin assigned a task to you\",\"type\":\"App\\\\Models\\\\Task\",\"type_id\":1,\"url\":\"http:\\/\\/127.0.0.1:8000\\/tasks\\/1\",\"action\":\"updated_assign\"}"
+  created_at: "2018-04-30 00:04:06"
+  updated_at: "2018-04-30 00:04:06"
+-
+  id: "53549d2f-3ec7-4eab-82a6-36491ec76f42"
+  type: "App\\Notifications\\TaskActionNotification"
+  notifiable_id: 1
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":1,\"created_user\":1,\"message\":\"tst task was created by SuperAdmin, and assigned to you\",\"type\":\"App\\\\Models\\\\Task\",\"type_id\":1,\"url\":\"http:\\/\\/127.0.0.1:8000\\/tasks\\/1\",\"action\":\"created\"}"
+  created_at: "2018-04-30 00:03:35"
+  updated_at: "2018-04-30 00:03:35"
+-
+  id: "6e1f01b8-1997-4155-8bf4-ee6330e69e9f"
+  type: "App\\Notifications\\LeadActionNotification"
+  notifiable_id: 1
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":1,\"created_user\":1,\"message\":\"aiuudmk was completed by SuperAdmin\",\"type\":\"App\\\\Models\\\\Lead\",\"type_id\":4,\"url\":\"http:\\/\\/127.0.0.1:8000\\/leads\\/4\",\"action\":\"updated_status\"}"
+  created_at: "2018-06-08 00:49:33"
+  updated_at: "2018-06-08 00:49:33"
+-
+  id: "70a6a302-913b-4845-b62c-5a623d47b792"
+  type: "App\\Notifications\\TaskActionNotification"
+  notifiable_id: 2
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":2,\"created_user\":1,\"message\":\"SuperAdmin inserted a new time for Johnson Kumar\",\"type\":\"App\\\\Models\\\\Task\",\"type_id\":1,\"url\":\"http:\\/\\/127.0.0.1:8000\\/tasks\\/1\",\"action\":\"updated_time\"}"
+  created_at: "2018-05-04 00:59:13"
+  updated_at: "2018-05-04 00:59:13"
+-
+  id: "75a72b3f-8953-46d1-bac9-70a2b34bf2a8"
+  type: "App\\Notifications\\TaskActionNotification"
+  notifiable_id: 2
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":2,\"created_user\":1,\"message\":\"SuperAdmin assigned a task to you\",\"type\":\"App\\\\Models\\\\Task\",\"type_id\":1,\"url\":\"http:\\/\\/127.0.0.1:8000\\/tasks\\/1\",\"action\":\"updated_assign\"}"
+  created_at: "2018-04-30 00:05:01"
+  updated_at: "2018-04-30 00:05:01"
+-
+  id: "7a1b966e-ee62-412b-9645-819b3018a91c"
+  type: "App\\Notifications\\LeadActionNotification"
+  notifiable_id: 1
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":1,\"created_user\":1,\"message\":\"test1 was created by SuperAdmin and assigned to you\",\"type\":\"App\\\\Models\\\\Lead\",\"type_id\":3,\"url\":\"http:\\/\\/127.0.0.1:8000\\/leads\\/3\",\"action\":\"created\"}"
+  created_at: "2018-06-08 00:44:46"
+  updated_at: "2018-06-08 00:44:46"
+-
+  id: "a8b9392d-8e85-4c5e-a368-88484e226843"
+  type: "App\\Notifications\\LeadActionNotification"
+  notifiable_id: 1
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":1,\"created_user\":1,\"message\":\"test was completed by SuperAdmin\",\"type\":\"App\\\\Models\\\\Lead\",\"type_id\":1,\"url\":\"http:\\/\\/127.0.0.1:8000\\/leads\\/1\",\"action\":\"updated_status\"}"
+  created_at: "2018-06-08 00:29:12"
+  updated_at: "2018-06-08 00:29:12"
+-
+  id: "ab1ee9b4-57b4-491b-ac48-76e08f48146a"
+  type: "App\\Notifications\\LeadActionNotification"
+  notifiable_id: 1
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":1,\"created_user\":1,\"message\":\"aiuudmk was created by SuperAdmin and assigned to you\",\"type\":\"App\\\\Models\\\\Lead\",\"type_id\":4,\"url\":\"http:\\/\\/127.0.0.1:8000\\/leads\\/4\",\"action\":\"created\"}"
+  created_at: "2018-06-08 00:45:43"
+  updated_at: "2018-06-08 00:45:43"
+-
+  id: "be32ea8d-2489-4498-9837-3e045cd9dfc0"
+  type: "App\\Notifications\\LeadActionNotification"
+  notifiable_id: 1
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":1,\"created_user\":1,\"message\":\"test was created by SuperAdmin and assigned to you\",\"type\":\"App\\\\Models\\\\Lead\",\"type_id\":1,\"url\":\"http:\\/\\/127.0.0.1:8000\\/leads\\/1\",\"action\":\"created\"}"
+  created_at: "2018-06-08 00:28:58"
+  updated_at: "2018-06-08 00:28:58"
+-
+  id: "cb45cd3a-4890-490d-9707-f9aeabacc87b"
+  type: "App\\Notifications\\TaskActionNotification"
+  notifiable_id: 2
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":2,\"created_user\":1,\"message\":\"SuperAdmin inserted a new time for Johnson Kumar\",\"type\":\"App\\\\Models\\\\Task\",\"type_id\":1,\"url\":\"http:\\/\\/127.0.0.1:8000\\/tasks\\/1\",\"action\":\"updated_time\"}"
+  created_at: "2018-05-04 00:53:04"
+  updated_at: "2018-05-04 00:53:04"
+-
+  id: "cf118fe0-5964-42db-b839-3bbf818ccdba"
+  type: "App\\Notifications\\TaskActionNotification"
+  notifiable_id: 1
+  notifiable_type: "App\\Models\\User"
+  data: "{\"assigned_user\":1,\"created_user\":1,\"message\":\"Ibbu was completed by SuperAdmin\",\"type\":\"App\\\\Models\\\\Task\",\"type_id\":2,\"url\":\"http:\\/\\/127.0.0.1:8000\\/tasks\\/2\",\"action\":\"updated_status\"}"
+  created_at: "2018-06-07 23:41:40"
+  updated_at: "2018-06-07 23:41:40"
+# fsCrm.permissions
+-
+  id: 1
+  name: "user-create"
+  display_name: "Create user"
+  description: "Permission to create user"
+  created_at: "2018-04-28 02:12:58"
+  updated_at: "2018-04-28 02:12:58"
+-
+  id: 2
+  name: "user-update"
+  display_name: "Update user"
+  description: "Permission to update user"
+  created_at: "2018-04-28 02:12:58"
+  updated_at: "2018-04-28 02:12:58"
+-
+  id: 3
+  name: "user-delete"
+  display_name: "Delete user"
+  description: "Permission to update delete"
+  created_at: "2018-04-28 02:12:58"
+  updated_at: "2018-04-28 02:12:58"
+-
+  id: 4
+  name: "client-create"
+  display_name: "Create client"
+  description: "Permission to create client"
+  created_at: "2018-04-28 02:12:58"
+  updated_at: "2018-04-28 02:12:58"
+-
+  id: 5
+  name: "client-update"
+  display_name: "Update client"
+  description: "Permission to update client"
+  created_at: "2018-04-28 02:12:58"
+  updated_at: "2018-04-28 02:12:58"
+-
+  id: 6
+  name: "client-delete"
+  display_name: "Delete client"
+  description: "Permission to delete client"
+  created_at: "2018-04-28 02:12:58"
+  updated_at: "2018-04-28 02:12:58"
+-
+  id: 7
+  name: "task-create"
+  display_name: "Create task"
+  description: "Permission to create task"
+  created_at: "2018-04-28 02:12:58"
+  updated_at: "2018-04-28 02:12:58"
+-
+  id: 8
+  name: "task-update"
+  display_name: "Update task"
+  description: "Permission to update task"
+  created_at: "2018-04-28 02:12:58"
+  updated_at: "2018-04-28 02:12:58"
+-
+  id: 9
+  name: "lead-create"
+  display_name: "Create lead"
+  description: "Permission to create lead"
+  created_at: "2018-04-28 02:12:58"
+  updated_at: "2018-04-28 02:12:58"
+-
+  id: 10
+  name: "lead-update"
+  display_name: "Update lead"
+  description: "Permission to update lead"
+  created_at: "2018-04-28 02:12:58"
+  updated_at: "2018-04-28 02:12:58"
+-
+  id: 11
+  name: "casebuilder"
+  display_name: "case form builder"
+  description: "builds a from structure for a selected component"
+-
+  id: 12
+  name: "enter-data"
+  display_name: "Add new data"
+  description: "add data components or data entry"
+-
+  id: 13
+  name: "approve-reject-component"
+  display_name: "approve-reject-component"
+  description: "can approve or reject component"
+-
+  id: 14
+  name: "manage-clients"
+  display_name: "Manage Clients"
+  description: "view all client details, stats etc.."
+# fsCrm.permission_role
+-
+  permission_id: 1
+  role_id: 1
+-
+  permission_id: 2
+  role_id: 1
+-
+  permission_id: 3
+  role_id: 1
+-
+  permission_id: 4
+  role_id: 1
+-
+  permission_id: 5
+  role_id: 1
+-
+  permission_id: 6
+  role_id: 1
+-
+  permission_id: 7
+  role_id: 1
+-
+  permission_id: 8
+  role_id: 1
+-
+  permission_id: 9
+  role_id: 1
+-
+  permission_id: 10
+  role_id: 1
+-
+  permission_id: 11
+  role_id: 1
+-
+  permission_id: 12
+  role_id: 1
+-
+  permission_id: 13
+  role_id: 1
+-
+  permission_id: 14
+  role_id: 1
+-
+  permission_id: 7
+  role_id: 5
+-
+  permission_id: 12
+  role_id: 5
+-
+  permission_id: 7
+  role_id: 6
+-
+  permission_id: 12
+  role_id: 6
+-
+  permission_id: 13
+  role_id: 7
+-
+  permission_id: 13
+  role_id: 8
+-
+  permission_id: 1
+  role_id: 12
+-
+  permission_id: 2
+  role_id: 12
+-
+  permission_id: 3
+  role_id: 12
+-
+  permission_id: 7
+  role_id: 12
+-
+  permission_id: 12
+  role_id: 12
+-
+  permission_id: 13
+  role_id: 12
+# fsCrm.reports
+-
+  id: 1
+  status: "draft"
+  report_no: 1
+  client_id: 1
+  employee_id: 1
+  created_at: "2018-05-21 23:37:49"
+  updated_at: "2018-05-21 23:37:49"
+# fsCrm.roles
+-
+  id: 1
+  name: "administrator"
+  display_name: "Administrator"
+  description: "System Administrator"
+  created_at: "2018-04-28 02:12:58"
+  updated_at: "2018-04-28 02:12:58"
+-
+  id: 4
+  name: "client account manager (cam)"
+  display_name: "Client Account Manager (CAM)"
+  description: "1.Receives Cases offline and online passes on the case details via email to DETL.\r\n2. Each CAM forwards the email to only one DETL."
+  created_at: "2018-04-29 23:26:07"
+  updated_at: "2018-04-29 23:26:07"
+-
+  id: 5
+  name: "data entry team leader (detl)"
+  display_name: "Data Entry Team Leader (DETL)"
+  description: "1.Creates a case in the system.\r\n2. Assigns to DETM.\r\n3. Assign ready case to PTL based on components like location user.\r\n4. One case (component) can have multiple rows; for e.g. Address check may have 'x' addresses where a candidate was residing tempora"
+  created_at: "2018-04-29 23:28:44"
+  updated_at: "2018-04-29 23:28:44"
+-
+  id: 6
+  name: "data entry team member (detm)"
+  display_name: "Data Entry Team Member (DETM)"
+  description: "1. Creates a case in the system.\r\n2. A case created will always stay with him/herself.\r\n3. Assembles information, punches in the system, uploads documents, enters remarks.\r\n4. Once all done, case is submitted for processing.\r\n5.Assign ready case to PTL ba"
+  created_at: "2018-04-29 23:31:53"
+  updated_at: "2018-04-29 23:31:53"
+-
+  id: 7
+  name: "process team leader (ptl)"
+  display_name: "Process Team Leader (PTL)"
+  description: "1. Case assigned by the DETL/DETM.\r\n2. Assign to PTM based on his team.\r\n3. Tagging, Uploading documents and remarks.\r\n4. Generates a task sheet for the Field Officer.\r\n5. Assigns Jobs/ tasks to field officer manually, collects report from the field offic"
+  created_at: "2018-04-29 23:37:50"
+  updated_at: "2018-04-29 23:37:50"
+-
+  id: 8
+  name: "process team member (ptm)"
+  display_name: "Process Team Member (PTM)"
+  description: "1. Case assigned by the PTL.\r\n2. Tagging, Uploading documents and Remarks.\r\n3. Generates a task sheet for the Field Officer (offline or outside the system).\r\n4. Assign jobs/ tasks to field officer, collect report from the filed officer manually and post i"
+  created_at: "2018-04-29 23:41:47"
+  updated_at: "2018-04-29 23:41:47"
+-
+  id: 9
+  name: "report writing team leader (rwtl)"
+  display_name: "Report Writing Team Leader (RWTL)"
+  description: "1.Assigns a case to the report writing member.\r\n2. Assigns a case to the QA.\r\n"
+  created_at: "2018-04-29 23:43:13"
+  updated_at: "2018-04-29 23:43:13"
+-
+  id: 10
+  name: "report writing team member (rwtm)"
+  display_name: "Report Writing Team Member (RWTM)"
+  description: "1. Writes & Uploads the report in the system."
+  created_at: "2018-04-29 23:43:54"
+  updated_at: "2018-04-29 23:43:54"
+-
+  id: 11
+  name: "report writing qc (rwqc)"
+  display_name: "Report Writing QC (RWQC)"
+  description: "Checks quality of reports and re assigns cases to RWTM/RWTL if necessary"
+  created_at: "2018-04-29 23:45:11"
+  updated_at: "2018-04-29 23:45:11"
+-
+  id: 12
+  name: "client"
+  display_name: "Client"
+  description: "client user role"
+  created_at: "2018-06-02 09:13:14"
+  updated_at: "2018-06-02 09:13:14"
+# fsCrm.role_user
+-
+  user_id: 1
+  role_id: 1
+-
+  user_id: 6
+  role_id: 4
+-
+  user_id: 13
+  role_id: 4
+-
+  user_id: 2
+  role_id: 5
+-
+  user_id: 7
+  role_id: 5
+-
+  user_id: 8
+  role_id: 6
+-
+  user_id: 9
+  role_id: 7
+-
+  user_id: 10
+  role_id: 8
+-
+  user_id: 14
+  role_id: 10
+-
+  user_id: 12
+  role_id: 11
+-
+  user_id: 15
+  role_id: 12
+# fsCrm.settings
+-
+  id: 1
+  task_complete_allowed: 2
+  task_assign_allowed: 2
+  lead_complete_allowed: 2
+  lead_assign_allowed: 2
+  time_change_allowed: 2
+  comment_allowed: 2
+  country: "en"
+  company: "Media"
+# fsCrm.status_codes
+-
+  id: 0
+  name: "Processing"
+  hex: "#000000"
+-
+  id: 1
+  name: "Rejected"
+  hex: "#DD5152"
+-
+  id: 2
+  name: "Approved"
+  hex: "#53B868"
+# fsCrm.tasks
+-
+  id: 1
+  title: "Johnson Kumar"
+  ref_no: 0
+  description: "description"
+  status: 1
+  user_assigned_id: 2
+  user_created_id: 1
+  client_id: 1
+  invoice_id: 1
+  deadline: "2018-05-03"
+  created_at: "2018-04-30 00:03:35"
+  updated_at: "2018-05-04 00:28:50"
+-
+  id: 2
+  title: "Ibbu"
+  ref_no: 0
+  description: ""
+  status: 2
+  user_assigned_id: 1
+  user_created_id: 1
+  client_id: 1
+  deadline: "0000-00-00"
+  created_at: "2018-04-30 00:03:35"
+  updated_at: "2018-06-07 23:41:40"
+# fsCrm.users
+-
+  id: 1
+  name: "SuperAdmin"
+  email: "admin@admin.com"
+  password: "$2y$10$KXK/dAyUYlgifjIgjBiY3eRy/EJs.o7H8y7iLKDvgdMHVSdcX9e.q"
+  address: ""
+  work_number: 0
+  personal_number: 0
+  image_path: ""
+  remember_token: "xhy4OFJsbQrV1EvzbTdcj5VIQjgSvNjlfRTcUsQTR5taSWAA7ryzTXUWVpBp"
+  created_at: "2016-06-04 13:42:19"
+  updated_at: "2018-04-28 02:22:41"
+-
+  id: 2
+  name: "John DETL"
+  email: "masoodw1@gmail.com"
+  password: "$2y$10$KXK/dAyUYlgifjIgjBiY3eRy/EJs.o7H8y7iLKDvgdMHVSdcX9e.q"
+  address: 12323
+  work_number: 23334
+  personal_number: 34343
+  remember_token: "XHcWiUGE00p865f5HNjoJYFaf14h0YnMKCnTs3E8EoaZNzaXKxhcBpmLAzvU"
+  created_at: "2018-04-29 23:56:04"
+  updated_at: "2018-04-29 23:57:00"
+-
+  id: 6
+  name: "Karan Sha"
+  email: "test@client.com"
+  password: "$2y$10$VXCtGtR4uZPkCtvQfqClYestQ5ENpXh9zFGgSQL4oDZbIzZAcZpcC"
+  address: "#g3, asf,.csasdf"
+  work_number: 9243012346
+  personal_number: 34343
+  remember_token: "5Sfzli0axZP20QykSEVR9Zd088Cn9gStCN4D2Vy8nyuK5NguDtvyvCj1lTl1"
+  created_at: "2018-05-17 10:52:52"
+  updated_at: "2018-05-17 10:52:52"
+-
+  id: 7
+  name: "Ravi Kumar"
+  email: "ravi@client.com"
+  password: "$2y$10$69WNYGO10xRmvFrMP7AMyeZ4TgvPyhwBViwyU4Ka5I6g8tWogQVje"
+  address: "#g3, asf,.csasdf"
+  work_number: 9243012346
+  personal_number: 34343
+  created_at: "2018-05-17 10:53:34"
+  updated_at: "2018-05-17 10:53:34"
+-
+  id: 8
+  name: "Priyanka Amin"
+  email: "priyanka@client.com"
+  password: "$2y$10$ysVCsDc7ojZqsfaIxP8J1eGVj7ziql8YrMzlwTpA2/HTvIK14EdMq"
+  address: "#g3, asf,.csasdf"
+  work_number: 9243012346
+  personal_number: 34343
+  created_at: "2018-05-17 10:55:46"
+  updated_at: "2018-05-17 10:55:46"
+-
+  id: 9
+  name: "Abhishek RK"
+  email: "abhishek@client.com"
+  password: "$2y$10$LdXAneRw8fWXhFn2FzxpgOQJpzzDhm.ACjv9JkJ13W812S001k6tO"
+  address: "wtc bangalore"
+  work_number: 9243012346
+  personal_number: 34343
+  created_at: "2018-05-17 10:57:12"
+  updated_at: "2018-05-17 10:57:12"
+-
+  id: 10
+  name: "David K"
+  email: "david@client.com"
+  password: "$2y$10$g/F/UzF1RVIhB0qX2hVLQevvFu5CgSApUzyzxfwYJ7tuKBXVaQm1a"
+  address: "wtc bangalore"
+  work_number: 9243012346
+  personal_number: 34343
+  created_at: "2018-05-17 10:58:20"
+  updated_at: "2018-05-17 10:58:20"
+-
+  id: 12
+  name: "TS Prince"
+  email: "prince@client.com"
+  password: "$2y$10$9iX7hp/BxTwVW7Nci4uEy.ZCMs94vQiTp.S69/DkA91CNIdhuBf.a"
+  address: "wtc bangalore"
+  work_number: 9243012346
+  personal_number: 34343
+  created_at: "2018-05-17 11:00:49"
+  updated_at: "2018-05-17 11:00:49"
+-
+  id: 13
+  name: "Naveen Prabhakar"
+  email: "naveen@client.com"
+  password: "$2y$10$GrBQKCVtlfIEz0r3xbS5oOJzpmMl7Wy2oNNzKCShB0l292Yu7LXlS"
+  address: "wtc bangalore"
+  work_number: 9243012346
+  personal_number: 34343
+  created_at: "2018-05-17 11:01:52"
+  updated_at: "2018-05-17 11:01:52"
+-
+  id: 14
+  name: "Chandrakumar J"
+  email: "chandrakumar@client.com"
+  password: "$2y$10$jsGrKFrlLE43ZF9sliGS2.YOf15hq9izj5fxzRg64XkTk1UW1rSeC"
+  address: "wtc bangalore"
+  work_number: 9243012346
+  personal_number: 34343
+  created_at: "2018-05-17 11:03:26"
+  updated_at: "2018-05-17 11:03:26"
+-
+  id: 15
+  name: "test client"
+  email: "client@client.com"
+  password: "$2y$10$gkZlE0KDFzeyv5zoYK6I9.t0uSEZ.0TRs9U6ctTM3FBW2aq/ZZunW"
+  address: "test"
+  work_number: 1234567890
+  personal_number: 123456789
+  remember_token: "piRhiyMHMFD7IlSNexlewa2L60wKfrf0Nogpt0nESKPTPy0n4bv5kaPNu4BH"
+  created_at: "2018-06-02 09:17:42"
+  updated_at: "2018-06-02 09:17:42"
+...
